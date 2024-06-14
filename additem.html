@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add item</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Add item</h1>
+    <form class="container" action="additem.php" method="post" id="itemForm">
+        <div class="form-group">
+            <label for="itemName">item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price"  pattern="[0-9]" required>
+        </div>
+        <div class="form-group">
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="date" id="expiryDate" name="expiryDate" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submitButton">Submit</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

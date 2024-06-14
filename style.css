@@ -1,0 +1,187 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #bab6b6; /* Light background for better readability */
+}
+
+.container {
+    border: 1px solid #ddd;
+    padding: 50px;
+    border-radius: 5px;
+    background-color: rgb(244, 219, 236);
+    box-shadow: 0 0 5px rgba(214, 169, 169, 0.1); /* Subtle shadow for depth */
+    max-width: 1000px; /* Set a maximum width for responsiveness */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0%;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to next line if needed */
+    justify-content: space-around; /* Distribute buttons evenly */
+}
+
+.big-button, .medium-button {
+    padding: 30px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px; /* Spacing between buttons */
+}
+
+.big-button {
+    padding: 40px 60px;
+    background-color: #4CAF50; /* Green for in-stock feeling */
+    color: white;
+    transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.big-button:hover {
+    background-color: #3e8e41;
+}
+
+.medium-button {
+    padding: 20px 40px;
+    background-color: #3498DB; /* Blue for action buttons */
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.medium-button:hover {
+    background-color: #2980B9;
+}
+
+.list-container {
+    margin-top: 20px;
+}
+
+.list-container div {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    min-height: 100px; /* Set minimum height to avoid content collapsing */
+    display: none; /* Initially hide all lists */
+}
+
+.list-container div:first-child { /* Show the first list (inStockList) by default */
+    display: block;
+}
+
+.add-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* Add styles for the new elements in addCustomer.php */
+
+.medicine-section,
+.other-items-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    align-items:end;
+}
+
+.medicine-row,
+.other-item-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.medicine-row select,
+.other-item-row select {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.removeMedicineBtn,
+.removeOtherItemBtn {
+    background-color: #f00;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.removeMedicineBtn:hover,
+.removeOtherItemBtn:hover {
+    background-color: #c00;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add spacing between form groups */
+}
+
+.form-label {
+    display: block; /* Ensure labels are displayed on separate lines */
+    margin-bottom: 5px; /* Add spacing between label and input */
+}
+
+.form-control {
+    display: block; /* Ensure inputs use full width */
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Add rounded corners */
+}
+
+.form-text {
+    display: block; /* Ensure help text appears on a new line */
+    margin-top: 5px;
+    color: #999; /* Gray color for less prominent text */
+    font-size: 0.8em; /* Slightly smaller font for help text */
+}
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.medicineList {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 15px;
+    background-color:rgb(244, 219, 236) ;
+    text-align: center;
+    margin-bottom: 5px;
+    
+}
+
+.medicineList-row {
+    margin-bottom: 5px;
+}
+
+.medicineL-row .name {
+    font-weight: bold;
+}

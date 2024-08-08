@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 60px;">Pharmacy Dashboard</h1>
+        <div class="buttons-container">
+            <button class="big-button" id="inStockBtn" onclick="location.href='instock.html'">
+                In Stock <span id="inStockCount"></span>
+            </button>
+            <button class="big-button" id="outOfStockBtn" onclick="location.href='outstock.html'">
+                Out of Stock <span id="outOfStockCount"></span>
+            </button>
+            <button class="big-button" id="expiredBtn" onclick="location.href='expiry.html'">
+                Expired Medicines <span id="expiredCount"></span>
+            </button>
+            <button class="big-button" id="otherItemsBtn" onclick="location.href='other.html'">
+                Other Items <span id="otherItemsCount"></span>
+            </button>
+            <button class="big-button" id="transactionsTodayBtn" onclick="location.href='today.html'">
+                Transactions Today <span id="transactionsCount"></span>
+            </button>
+            <button class="big-button" id="customerListBtn" onclick="location.href='consumer.html'">
+                Customer List <span id="customerCount"></span>
+            </button>
+        </div>
+        
+        <div class="add-buttons">
+            <button class="medium-button" onclick="location.href='addcoustomer.html'">Add Customer</button>
+            <button class="medium-button" onclick="location.href='addmedicine.html'">Add Medicine</button>
+            <button class="medium-button" onclick="location.href='additem.html'">Add Other Item</button>
+        </div>
+    </div>
+    <script>
+        const inStockBtn = document.getElementById('inStockBtn');
+        const outOfStockBtn = document.getElementById('outOfStockBtn');
+        const expiredBtn = document.getElementById('expiredBtn');
+        const otherItemsBtn = document.getElementById('otherItemsBtn');
+        const transactionsTodayBtn = document.getElementById('transactionsTodayBtn');
+        const customerListBtn = document.getElementById('customerListBtn');
+
+        const listContainer = document.querySelector('.list-container');
+
+        inStockBtn.addEventListener('click', () => loadList('inStockList'));
+        outOfStockBtn.addEventListener('click', () => loadList('outOfStockList'));
+        expiredBtn.addEventListener('click', () => loadList('expiredList'));
+        otherItemsBtn.addEventListener('click', () => loadList('otherItemsList'));
+        transactionsTodayBtn.addEventListener('click', () => loadList('transactionsList'));
+        customerListBtn.addEventListener('click', () => loadList('customerList'));
+
+        function loadList(targetId) {
+            const listElement = document.getElementById(targetId);
+            listElement.innerHTML = 'Loading...';
+
+            fetch('fetchData.php?target=' + targetId)
+                .then(response => response.text())
+                .then(data => {
+                    listElement.innerHTML = data;
+                })
+                .catch(error => {
+                    listElement.innerHTML = 'Error loading data.';
+                });
+        }
+    </script>
+</body>
+</html>

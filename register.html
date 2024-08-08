@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #6feaea, #cacdd1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* Slightly higher opacity for better contrast */
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-bottom: 20px; /* Reduced margin to ensure it fits well */
+            font-size: 2.5em;
+            color: #333; /* Dark color for better visibility */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #555; /* Slightly lighter color for labels */
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #6681bb;
+            background-image: linear-gradient(315deg, #5195d1 0%, #5f37cb 74%);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-image: linear-gradient(315deg, #2575fc 0%, #6a11cb 74%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register as a new user</h1>
+        <form action="register.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="uname" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="pword" required><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="hobbies">Hobbies:</label>
+            <input type="text" id="hobbies" name="hobbies" required><br><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

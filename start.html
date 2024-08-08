@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #555;
+        }
+        button {
+            background-color: #6a11cb;
+            background-image: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-image: linear-gradient(315deg, #2575fc 0%, #6a11cb 74%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME</h1>
+        <button onclick="location.href='login.html'">Already existing user</button><br><br>
+        <button onclick="location.href='register.html'">New user</button><br><br>
+    </div>
+</body>
+</html>

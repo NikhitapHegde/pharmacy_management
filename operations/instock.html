@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Stock Medicines</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            align-items: center;
+        }
+        
+        .medicineList {
+            margin-left: 30%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: rgb(244, 219, 236);
+            text-align: center;
+            width: 500px;
+            object-fit: contain;
+
+        }
+        
+        .medicine-row {
+            margin-bottom: 5px;
+        }
+        
+        .medicine-row .name,
+        .medicine-row .qty,
+        .medicine-row .price,
+        .medicine-row .expiry_date {
+            text-align: center;
+        }
+    </style>        
+</head>
+<body>
+    <h1 style="text-align: center;">In-Stock Medicines</h1>
+    <div id="medicineList" class="medicineList"></div>
+    <script src="instock.js"></script>
+</body>
+</html>
